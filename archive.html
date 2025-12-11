@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Основная favicon (16×16 и 32×32) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="image.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image.png">
+
+    <!-- Apple Touch Icon (для iOS Safari, добавление в «Домой») -->
+    <link rel="apple-touch-icon" sizes="180x180" href="image.png">
+
+    <!-- Android/Chrome — тема и маска иконки -->
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" sizes="192x192" href="image.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="image.png">
+
+    <!-- Manifest для PWA (рекомендуется) -->
+    <link rel="manifest" href="image.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Архив конкурсов | WebTestBest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.5;
+            padding-bottom: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #fff;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #2c3e50;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #2c3e50;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 14px 30px;
+            border: 2px solid #2c3e50;
+            transition: all 0.2s ease;
+            margin-top: 10px;
+        }
+
+        .back-button:hover {
+            background: #fff;
+            color: #2c3e50;
+        }
+
+        .stats-bar {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+        }
+
+        .stat-item {
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .archive-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2c3e50;
+        }
+
+        .year-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .archive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .archive-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            overflow: hidden;
+            transition: all 0.2s ease;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+        }
+
+        .archive-card:hover {
+            box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+            border-color: #2c3e50;
+        }
+
+        .card-header {
+            background-color: #2c3e50;
+            padding: 18px;
+            text-align: center;
+            border-bottom: 1px solid #1a252f;
+            position: relative;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e74c3c;
+            color: white;
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .contest-theme {
+            font-size: 1rem;
+            color: #ecf0f1;
+            margin-top: 5px;
+            font-weight: normal;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .winner-info {
+            background-color: #f1f8ff;
+            border-left: 4px solid #2c3e50;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .winner-title {
+            color: #2c3e50;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .winner-name {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .winner-prize {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-box {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border: 1px solid #eee;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            display: block;
+        }
+
+        .stat-label-card {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background-color: #e9ecef;
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            color: #495057;
+            border: 1px solid #dee2e6;
+        }
+
+        .card-footer {
+            padding: 15px 25px 20px;
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 0.9rem;
+            background-color: #f8f9fa;
+            border-top: 1px solid #eee;
+        }
+
+        .difficulty {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+            grid-column: 1 / -1;
+        }
+
+        .no-results i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #bdc3c7;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: #0088cc;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .archive-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .stat-item {
+                width: 100%;
+                max-width: 200px;
+            }
+            
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .card-footer {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-archive"></i> АРХИВ КОНКУРСОВ WebTestBest</h1>
+            <p class="subtitle">История проведенных конкурсов по веб-дизайну и программированию</p>
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> ВЕРНУТЬСЯ К ТЕКУЩЕМУ КОНКУРСУ
+            </a>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Проведено конкурсов</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Всего участников</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">36</span>
+                <span class="stat-label">Всего голосов</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">300 ₽</span>
+                <span class="stat-label">Раздано призов</span>
+            </div>
+        </div>
+
+        <section class="archive-section">
+            <h2 class="section-title">ВСЕ ПРОВЕДЕННЫЕ КОНКУРСЫ</h2>
+
+            <h3 class="year-title">2025 ГОД</h3>
+            <div class="archive-grid">
+                <!-- Конкурс 1 - 2025 -->
+                <div class="archive-card">
+                    <div class="card-header">
+                        <div class="card-badge">Завершен</div>
+                        <h3>КОНКУРС #1</h3>
+                        <div class="contest-theme">Адаптивный лендинг на тему "Арбитраж и криптовалюта"</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="winner-info">
+                            <div class="winner-title"><i class="fas fa-trophy"></i> ПОБЕДИТЕЛЬ</div>
+                            <div class="winner-name">Висляев Алексей</div>
+                            <div class="winner-prize">Приз: 300 ₽</div>
+                        </div>
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <span class="stat-value">3</span>
+                                <span class="stat-label-card">Участников</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-value">36</span>
+                                <span class="stat-label-card">Голосов</span>
+                            </div>
+                        </div>
+                        <p><strong>Даты:</strong> 15.11.2025 - 25.11.2025</p>
+                        <div class="technologies">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <!-- <span class="tech-tag">Bootstrap</span> -->
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="difficulty">Сложность: ★★★★☆</span>
+                        <span><i class="far fa-calendar"></i> Ноябрь 2025</span>
+                    </div>
+                </div>
+
+                <!-- Конкурс 2 - 2025
+                <div class="archive-card">
+                    <div class="card-header">
+                        <div class="card-badge">Популярный</div>
+                        <h3>КОНКУРС #7</h3>
+                        <div class="contest-theme">Крипто-биржевая платформа с графиками</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="winner-info">
+                            <div class="winner-title"><i class="fas fa-trophy"></i> ПОБЕДИТЕЛЬ</div>
+                            <div class="winner-name">Максим Волков</div>
+                            <div class="winner-prize">Приз: 450 ₽</div>
+                        </div>
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <span class="stat-value">15</span>
+                                <span class="stat-label-card">Участников</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-value">1,203</span>
+                                <span class="stat-label-card">Голосов</span>
+                            </div>
+                        </div>
+                        <p><strong>Даты:</strong> 01.10.2025 - 15.10.2025</p>
+                        <div class="technologies">
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">API</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">WebSocket</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="difficulty">Сложность: ★★★★★</span>
+                        <span><i class="far fa-calendar"></i> Октябрь 2025</span>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <h3 class="year-title">2024 ГОД</h3>
+            <div class="archive-grid"> -->
+                <!-- Конкурс 3 - 2024 -->
+                <!-- <div class="archive-card">
+                    <div class="card-header">
+                        <div class="card-badge">Завершен</div>
+                        <h3>КОНКУРС #6</h3>
+                        <div class="contest-theme">Интернет-магазин электроники</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="winner-info">
+                            <div class="winner-title"><i class="fas fa-trophy"></i> ПОБЕДИТЕЛЬ</div>
+                            <div class="winner-name">Елена Смирнова</div>
+                            <div class="winner-prize">Приз: 400 ₽</div>
+                        </div>
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <span class="stat-value">18</span>
+                                <span class="stat-label-card">Участников</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-value">956</span>
+                                <span class="stat-label-card">Голосов</span>
+                            </div>
+                        </div>
+                        <p><strong>Даты:</strong> 20.08.2024 - 05.09.2024</p>
+                        <div class="technologies">
+                            <span class="tech-tag">E-commerce</span>
+                            <span class="tech-tag">Корзина покупок</span>
+                            <span class="tech-tag">Фильтры</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="difficulty">Сложность: ★★★★☆</span>
+                        <span><i class="far fa-calendar"></i> Август 2024</span>
+                    </div>
+                </div> -->
+
+                <!-- Конкурс 4 - 2024 -->
+                <!-- <div class="archive-card">
+                    <div class="card-header">
+                        <div class="card-badge">Креативный</div>
+                        <h3>КОНКУРС #5</h3>
+                        <div class="contest-theme">Персональное портфолио веб-разработчика</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="winner-info">
+                            <div class="winner-title"><i class="fas fa-trophy"></i> ПОБЕДИТЕЛЬ</div>
+                            <div class="winner-name">Артем Новиков</div>
+                            <div class="winner-prize">Приз: 350 ₽</div>
+                        </div>
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <span class="stat-value">22</span>
+                                <span class="stat-label-card">Участников</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-value">1,450</span>
+                                <span class="stat-label-card">Голосов</span>
+                            </div>
+                        </div>
+                        <p><strong>Даты:</strong> 10.06.2024 - 25.06.2024</p>
+                        <div class="technologies">
+                            <span class="tech-tag">Анимации CSS</span>
+                            <span class="tech-tag">Parallax</span>
+                            <span class="tech-tag">Слайдеры</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="difficulty">Сложность: ★★★☆☆</span>
+                        <span><i class="far fa-calendar"></i> Июнь 2024</span>
+                    </div>
+                </div> -->
+
+                <!-- Конкурс 5 - 2024 -->
+                <!-- <div class="archive-card">
+                    <div class="card-header">
+                        <div class="card-badge">Завершен</div>
+                        <h3>КОНКУРС #4</h3>
+                        <div class="contest-theme">Мобильное приложение для заказа еды (PWA)</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="winner-info">
+                            <div class="winner-title"><i class="fas fa-trophy"></i> ПОБЕДИТЕЛЬ</div>
+                            <div class="winner-name">Дарья Морозова</div>
+                            <div class="winner-prize">Приз: 380 ₽</div>
+                        </div>
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <span class="stat-value">14</span>
+                                <span class="stat-label-card">Участников</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-value">892</span>
+                                <span class="stat-label-card">Голосов</span>
+                            </div>
+                        </div>
+                        <p><strong>Даты:</strong> 15.04.2024 - 30.04.2024</p>
+                        <div class="technologies">
+                            <span class="tech-tag">PWA</span>
+                            <span class="tech-tag">Service Workers</span>
+                            <span class="tech-tag">Мобильная верстка</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="difficulty">Сложность: ★★★★☆</span>
+                        <span><i class="far fa-calendar"></i> Апрель 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="year-title">2023 ГОД</h3>
+            <div class="archive-grid"> -->
+                <!-- Конкурс 6 - 2023 -->
+                <!-- <div class="archive-card">
+                    <div class="card-header">
+                        <div class="card-badge">Классика</div>
+                        <h3>КОНКУРС #3</h3>
+                        <div class="contest-theme">Игровой портал с браузерными играми</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="winner-info">
+                            <div class="winner-title"><i class="fas fa-trophy"></i> ПОБЕДИТЕЛЬ</div>
+                            <div class="winner-name">Игорь Павлов</div>
+                            <div class="winner-prize">Приз: 300 ₽</div>
+                        </div>
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <span class="stat-value">16</span>
+                                <span class="stat-label-card">Участников</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-value">743</span>
+                                <span class="stat-label-card">Голосов</span>
+                            </div>
+                        </div>
+                        <p><strong>Даты:</strong> 05.12.2023 - 20.12.2023</p>
+                        <div class="technologies">
+                            <span class="tech-tag">Canvas</span>
+                            <span class="tech-tag">JavaScript игры</span>
+                            <span class="tech-tag">WebGL</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="difficulty">Сложность: ★★★★★</span>
+                        <span><i class="far fa-calendar"></i> Декабрь 2023</span>
+                    </div>
+                </div> -->
+
+                <!-- Конкурс 7 - 2023 -->
+                <!-- <div class="archive-card">
+                    <div class="card-header">
+                        <div class="card-badge">Архивный</div>
+                        <h3>КОНКУРС #2</h3>
+                        <div class="contest-theme">Кошелёк для криптовалют с мультиподдержкой</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="winner-info">
+                            <div class="winner-title"><i class="fas fa-trophy"></i> ПОБЕДИТЕЛЬ</div>
+                            <div class="winner-name">Сергей Кузнецов</div>
+                            <div class="winner-prize">Приз: 280 ₽</div>
+                        </div>
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <span class="stat-value">11</span>
+                                <span class="stat-label-card">Участников</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-value">621</span>
+                                <span class="stat-label-card">Голосов</span>
+                            </div>
+                        </div>
+                        <p><strong>Даты:</strong> 10.10.2023 - 25.10.2023</p>
+                        <div class="technologies">
+                            <span class="tech-tag">Блокчейн API</span>
+                            <span class="tech-tag">Безопасность</span>
+                            <span class="tech-tag">Шифрование</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="difficulty">Сложность: ★★★★★</span>
+                        <span><i class="far fa-calendar"></i> Октябрь 2023</span>
+                    </div>
+                </div> -->
+
+                <!-- Конкурс 8 - 2023 -->
+                <!-- <div class="archive-card">
+                    <div class="card-header">
+                        <div class="card-badge">Архивный</div>
+                        <h3>КОНКУРС #1</h3>
+                        <div class="contest-theme">Корпоративный сайт для юридической фирмы</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="winner-info">
+                            <div class="winner-title"><i class="fas fa-trophy"></i> ПОБЕДИТЕЛЬ</div>
+                            <div class="winner-name">Ольга Васнецова</div>
+                            <div class="winner-prize">Приз: 250 ₽</div>
+                        </div>
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <span class="stat-value">13</span>
+                                <span class="stat-label-card">Участников</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-value">534</span>
+                                <span class="stat-label-card">Голосов</span>
+                            </div>
+                        </div>
+                        <p><strong>Даты:</strong> 20.08.2023 - 05.09.2023</p>
+                        <div class="technologies">
+                            <span class="tech-tag">Строгий дизайн</span>
+                            <span class="tech-tag">Многостраничность</span>
+                            <span class="tech-tag">Формы обратной связи</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="difficulty">Сложность: ★★★☆☆</span>
+                        <span><i class="far fa-calendar"></i> Август 2023</span>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <footer>
+            <p>АРХИВ КОНКУРСОВ WebTestBest &copy; 2025</p>
+            <div class="footer-links">
+                <a href="index.html" class="footer-link"><i class="fas fa-home"></i> Текущий конкурс</a>
+                <a href="#" class="footer-link"><i class="fas fa-question-circle"></i> О проекте</a>
+                <a href="#" class="footer-link"><i class="fas fa-envelope"></i> Контакты</a>
+            </div>
+            <p style="color: #999; margin-top: 15px; font-size: 0.85rem;">
+                Все конкурсы проводятся на платформе WebTestBest
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Анимация при наведении на карточки
+        document.querySelectorAll('.archive-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.borderColor = '#2c3e50';
+                this.style.boxShadow = '0 6px 12px rgba(0,0,0,0.12)';
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.borderColor = '#ddd';
+                this.style.boxShadow = '0 3px 6px rgba(0,0,0,0.08)';
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Анимация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.archive-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 + index * 100);
+            });
+        });
+
+        // Обработка кликов по карточкам
+        document.querySelectorAll('.archive-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.closest('a')) {
+                    const theme = this.querySelector('.contest-theme').textContent;
+                    const winner = this.querySelector('.winner-name').textContent;
+                    
+                    // Можно добавить модальное окно с деталями
+                    console.log(`Конкурс: ${theme}`);
+                    console.log(`Победитель: ${winner}`);
+                    
+                    // Анимация клика
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 200);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
