@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-        <!-- Основная favicon (16×16 и 32×32) -->
+    <!-- Основная favicon (16×16 и 32×32) -->
     <link rel="icon" type="image/png" sizes="32x32" href="image.png">
     <link rel="icon" type="image/png" sizes="16x16" href="image.png">
 
@@ -330,7 +330,7 @@
     <div class="container">
         <header>
             <h1><i class="fas fa-code"></i> КОНКУРС ВЕБ-СТРАНИЦ</h1>
-            <p class="subtitle">Голосование за лучшую веб-страницу среди представленных работ участников на тему "Криптовалюта, арбитраж, трейдинг". Голосование продлится до <span class="deadline">09.12.2025</span>.</p>
+            <p class="subtitle">Голосование за лучшую веб-страницу среди представленных работ участников на тему "Компьютерный сервисный центр". Голосование продлится до <span class="deadline">28.12.2025</span>.</p>
             <!-- Кнопка для перехода к архивным конкурсам -->
             <div style="text-align: center; margin: 30px auto; max-width: 800px;">
                 <a href="archive.html" style="
@@ -352,7 +352,7 @@
                 <p style="color: #666; font-size: 0.9rem; margin-top: 10px;">
                     Посмотрите результаты прошлых конкурсов WebTestBest
                 </p>
-</div>
+            </div>
         </header>
 
         <section class="telegram-vote">
@@ -362,11 +362,9 @@
                 <i class="fab fa-telegram"></i> ПЕРЕЙТИ К ГОЛОСОВАНИЮ
             </a>
             <div class="timer">
-                <p>Голосование активно до: <span class="deadline">09 декабря 2025 года, 23:59</span></p>
+                <p>Голосование активно до: <span class="deadline">28 декабря 2025 года, 23:59</span></p>
             </div>
         </section>
-
-        
 
         <div class="info-box">
             <h3><i class="fas fa-info-circle"></i> КРИТЕРИИ ОЦЕНКИ РАБОТ</h3>
@@ -396,13 +394,11 @@
                         <h3>ВЕБ-СТРАНИЦА #1</h3>
                     </div>
                     <div class="card-body">
-                        
                         <a href="Alex/index1.html" target="_blank" class="preview-link">
                             <i class="fas fa-external-link-alt"></i> ПРОСМОТР РАБОТЫ
                         </a>
                     </div>
                     <div class="card-footer">
-                       
                         <span><i class="fas fa-code"></i> HTML, CSS, JavaScript</span>
                     </div>
                 </div>
@@ -412,13 +408,11 @@
                         <h3>ВЕБ-СТРАНИЦА #2</h3>
                     </div>
                     <div class="card-body">
-                       
                         <a href="kostya/index2.html" target="_blank" class="preview-link">
                             <i class="fas fa-external-link-alt"></i> ПРОСМОТР РАБОТЫ
                         </a>
                     </div>
                     <div class="card-footer">
-                       
                         <span><i class="fas fa-code"></i> HTML, CSS, JavaScript</span>
                     </div>
                 </div>
@@ -428,13 +422,11 @@
                         <h3>ВЕБ-СТРАНИЦА #3</h3>
                     </div>
                     <div class="card-body">
-                        
                         <a href="Kolya/index3.html" target="_blank" class="preview-link">
                             <i class="fas fa-external-link-alt"></i> ПРОСМОТР РАБОТЫ
                         </a>
                     </div>
                     <div class="card-footer">
-                       
                         <span><i class="fas fa-code"></i> HTML, CSS, JavaScript</span>
                     </div>
                 </div>
@@ -450,7 +442,7 @@
                 </li>
                 <li>
                     <i class="fas fa-calendar-alt"></i>
-                    <span><strong>Сроки проведения:</strong> Голосование проходит с 01.12.2025 по 09.12.2025. Результаты будут объявлены 10.12.2025.</span>
+                    <span><strong>Сроки проведения:</strong> Голосование проходит с 01.12.2025 по 28.12.2025. Результаты будут объявлены 29.12.2025.</span>
                 </li>
                 <li>
                     <i class="fas fa-eye"></i>
@@ -473,19 +465,18 @@
 
         <footer>
             <p>КОНКУРС ВЕБ-СТРАНИЦ &copy; 2025. Все права защищены.</p>
-            
         </footer>
     </div>
 
     <script>
-        // Таймер обратного отсчета до 09.12.2025
+        // Таймер обратного отсчета до 28.12.2025
         function updateCountdown() {
-            const endDate = new Date('December 9, 2025 23:59:59').getTime();
+            const endDate = new Date('December 28, 2025 23:59:59').getTime();
             const now = new Date().getTime();
             const timeLeft = endDate - now;
             
             if (timeLeft < 0) {
-                document.querySelector('.timer').innerHTML = '<p>Голосование завершено <span class="deadline">09.12.2025</span></p>';
+                document.querySelector('.timer').innerHTML = '<p>Голосование завершено <span class="deadline">28.12.2025</span></p>';
                 return;
             }
             
