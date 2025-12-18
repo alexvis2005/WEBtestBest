@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - Alex Event Fix PC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+</head>
+<body>
+    <!-- Прелоадер -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="logo-loader">
+                <div class="logo-part">A</div>
+                <div class="logo-part">E</div>
+                <div class="logo-part">F</div>
+                <div class="logo-part">P</div>
+                <div class="logo-part">C</div>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="content">
+        <!-- Фон с множеством плавающих элементов -->
+        <div class="main-bg">
+            <div class="bg-overlay"></div>
+            <!-- Плавающие элементы - 20 штук -->
+            <div class="floating-element fe-1"><i class="fas fa-microchip"></i></div>
+            <div class="floating-element fe-2"><i class="fas fa-desktop"></i></div>
+            <div class="floating-element fe-3"><i class="fas fa-server"></i></div>
+            <div class="floating-element fe-4"><i class="fas fa-laptop"></i></div>
+            <div class="floating-element fe-5"><i class="fas fa-memory"></i></div>
+            <div class="floating-element fe-6"><i class="fas fa-microchip"></i></div>
+            <div class="floating-element fe-7"><i class="fas fa-desktop"></i></div>
+            <div class="floating-element fe-8"><i class="fas fa-server"></i></div>
+            <div class="floating-element fe-9"><i class="fas fa-laptop"></i></div>
+            <div class="floating-element fe-10"><i class="fas fa-memory"></i></div>
+            <div class="floating-element fe-11"><i class="fas fa-microchip"></i></div>
+            <div class="floating-element fe-12"><i class="fas fa-desktop"></i></div>
+            <div class="floating-element fe-13"><i class="fas fa-server"></i></div>
+            <div class="floating-element fe-14"><i class="fas fa-laptop"></i></div>
+            <div class="floating-element fe-15"><i class="fas fa-memory"></i></div>
+            <div class="floating-element fe-16"><i class="fas fa-microchip"></i></div>
+            <div class="floating-element fe-17"><i class="fas fa-desktop"></i></div>
+            <div class="floating-element fe-18"><i class="fas fa-server"></i></div>
+            <div class="floating-element fe-19"><i class="fas fa-laptop"></i></div>
+            <div class="floating-element fe-20"><i class="fas fa-memory"></i></div>
+        </div>
+
+        <!-- Навигация -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-text">ALEX EVENT</span>
+                    <span class="logo-highlight">FIX PC</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="reviews.html" class="active">Отзывы</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                </ul>
+                <div class="nav-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+7 (495) 123-45-67</span>
+                </div>
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Заголовок страницы -->
+        <section class="page-hero reviews-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1 class="page-hero-title">Отзывы клиентов</h1>
+                    <p class="page-hero-subtitle">Что говорят о нашей работе</p>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Все отзывы -->
+        <section class="all-reviews">
+            <div class="container">
+                <div class="reviews-filter">
+                    <button class="filter-btn active" data-filter="all">Все отзывы</button>
+                    <button class="filter-btn" data-filter="repair">Ремонт ПК</button>
+                    <button class="filter-btn" data-filter="laptop">Ремонт ноутбуков</button>
+                    <button class="filter-btn" data-filter="data">Восстановление данных</button>
+                    <button class="filter-btn" data-filter="software">Настройка ПО</button>
+                </div>
+                
+                <div class="reviews-grid">
+                    <!-- Отзыв 1 -->
+                    <div class="review-full" data-category="repair">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="reviewer-details">
+                                    <h3>Дмитрий Смирнов</h3>
+                                    <div class="review-date">15 июня 2023</div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-text">5.0</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h4>Ремонт игрового компьютера</h4>
+                            <p>Обратился с проблемой - компьютер не включался после грозы. Мастер приехал через 40 минут, диагностировал проблему с блоком питания и материнской платой. Заменил блок питания на более мощный, протестировал все компоненты. Работа выполнена за 2 часа, компьютер работает идеально. Отдельно хочу отметить вежливость и профессионализм мастера - все объяснил, показал, дал гарантию.</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="review-service">
+                                <i class="fas fa-tag"></i>
+                                <span>Ремонт компьютера</span>
+                            </div>
+                            <div class="review-response">
+                                <i class="fas fa-reply"></i>
+                                <span>Ответ сервиса: Спасибо за отзыв, Дмитрий! Рады были помочь.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Отзыв 2 -->
+                    <div class="review-full" data-category="laptop">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="reviewer-details">
+                                    <h3>Анна Козлова</h3>
+                                    <div class="review-date">3 июня 2023</div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-text">5.0</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h4>Замена экрана ноутбука</h4>
+                            <p>Случайно уронила ноутбук, экран разбился. Думала, что ремонт будет стоить очень дорого. Обратилась в Alex Event Fix PC, мастер приехал в тот же день. Оказалось, что замена матрицы обойдется в 2 раза дешевле, чем я предполагала. Работа выполнена за 1.5 часа прямо у меня дома. Ноутбук как новый! Спасибо за оперативность и честные цены. Теперь всем рекомендую ваш сервис.</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="review-service">
+                                <i class="fas fa-tag"></i>
+                                <span>Ремонт ноутбука</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Отзыв 3 -->
+                    <div class="review-full" data-category="data">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="reviewer-details">
+                                    <h3>Сергей Волков</h3>
+                                    <div class="review-date">22 мая 2023</div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-text">4.5</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h4>Восстановление данных с жесткого диска</h4>
+                            <p>После сбоя системы перестал определяться жесткий диск с важными рабочими файлами. Обратился в несколько сервисов, везде говорили, что данные потеряны. В Alex Event Fix PC взялись за работу. Через 2 дня мне вернули 95% данных! Не восстановились только некоторые системные файлы, но все рабочие документы, фото и проекты сохранились. Цена немного выше среднего, но результат того стоит.</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="review-service">
+                                <i class="fas fa-tag"></i>
+                                <span>Восстановление данных</span>
+                            </div>
+                            <div class="review-response">
+                                <i class="fas fa-reply"></i>
+                                <span>Ответ сервиса: Сергей, спасибо за понимание. Восстановление данных с физически поврежденных дисков действительно требует специального оборудования и времени.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Отзыв 4 -->
+                    <div class="review-full" data-category="software">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="reviewer-details">
+                                    <h3>Елена Новикова</h3>
+                                    <div class="review-date">14 мая 2023</div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-text">5.0</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h4>Настройка компьютера после вирусов</h4>
+                            <p>Компьютер стал очень медленно работать, постоянно появлялась реклама. Думала, что придется переустанавливать систему и терять все данные. Мастер не только удалил все вирусы, но и оптимизировал систему, установил антивирус, показал, как избежать подобных проблем в будущем. Работа заняла 3 часа, но результат превзошел ожидания - компьютер работает быстрее, чем когда я его покупала! Очень благодарна за терпение и подробные объяснения.</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="review-service">
+                                <i class="fas fa-tag"></i>
+                                <span>Удаление вирусов</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Отзыв 5 -->
+                    <div class="review-full" data-category="repair">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="reviewer-details">
+                                    <h3>Александр Морозов</h3>
+                                    <div class="review-date">5 мая 2023</div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-text">5.0</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h4>Сборка игрового ПК</h4>
+                            <p>Заказывал сборку игрового компьютера под свои требования. Консультант помог подобрать оптимальную конфигурацию в рамках бюджета. Собрали всё за 1 день, установили Windows, драйверы, необходимый софт. Компьютер работает безупречно уже 2 месяца, все игры на максималках. Отличная работа, рекомендую!</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="review-service">
+                                <i class="fas fa-tag"></i>
+                                <span>Сборка ПК</span>
+                            </div>
+                            <div class="review-response">
+                                <i class="fas fa-reply"></i>
+                                <span>Ответ сервиса: Александр, рады, что вы довольны! Удачи в играх!</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Отзыв 6 -->
+                    <div class="review-full" data-category="laptop">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="reviewer-details">
+                                    <h3>Ольга Семенова</h3>
+                                    <div class="review-date">28 апреля 2023</div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-text">5.0</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h4>Чистка ноутбука от пыли</h4>
+                            <p>Ноутбук стал сильно греться и выключаться при нагрузке. По совету знакомой обратилась в Alex Event Fix PC. Мастер приехал, почистил ноутбук от пыли, заменил термопасту. Теперь ноутбук работает тихо и не перегревается. Цена адекватная, работа качественная. Буду обращаться еще!</p>
+                        </div>
+                        <div class="review-footer">
+                            <div class="review-service">
+                                <i class="fas fa-tag"></i>
+                                <span>Чистка ноутбука</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reviews-pagination">
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn">4</button>
+                    <span class="pagination-dots">...</span>
+                    <button class="pagination-btn">12</button>
+                    <button class="pagination-next">Следующая <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма добавления отзыва -->
+        <section class="add-review">
+            <div class="container">
+                <div class="add-review-content">
+                    <h2>Оставить отзыв</h2>
+                    <p>Поделитесь вашим опытом работы с нашим сервисом</p>
+                    
+                    <form class="review-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Ваше имя *</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Услуга *</label>
+                            <select id="service" required>
+                                <option value="">Выберите услугу</option>
+                                <option value="repair">Ремонт компьютера</option>
+                                <option value="laptop">Ремонт ноутбука</option>
+                                <option value="data">Восстановление данных</option>
+                                <option value="software">Настройка ПО</option>
+                                <option value="build">Сборка ПК</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Оценка *</label>
+                            <div class="rating-input">
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star5"><i class="fas fa-star"></i></label>
+                                
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4"><i class="fas fa-star"></i></label>
+                                
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3"><i class="fas fa-star"></i></label>
+                                
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2"><i class="fas fa-star"></i></label>
+                                
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1"><i class="fas fa-star"></i></label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="title">Заголовок отзыва *</label>
+                            <input type="text" id="title" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-text">Текст отзыва *</label>
+                            <textarea id="review-text" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Отправить отзыв</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <span class="logo-text">ALEX EVENT</span>
+                            <span class="logo-highlight">FIX PC</span>
+                        </div>
+                        <p class="footer-description">
+                            Профессиональный ремонт и обслуживание компьютеров в Москве с 2013 года.
+                        </p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Страницы</h3>
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="services.html">Услуги</a></li>
+                            <li><a href="about.html">О компании</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contacts">
+                        <h3>Контакты</h3>
+                        <ul>
+                            <li><i class="fas fa-phone-alt"></i> +7 (495) 123-45-67</li>
+                            <li><i class="fas fa-envelope"></i> info@alexeventfixpc.ru</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Компьютерная, 15</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Alex Event Fix PC. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Кнопка наверх -->
+    <button class="scroll-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script src="js/reviews.js"></script>
+</body>
+</html>

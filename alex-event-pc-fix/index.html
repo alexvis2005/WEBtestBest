@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Event Fix PC - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+</head>
+<body>
+    <!-- Прелоадер -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="logo-loader">
+                <div class="logo-part">A</div>
+                <div class="logo-part">E</div>
+                <div class="logo-part">F</div>
+                <div class="logo-part">P</div>
+                <div class="logo-part">C</div>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="content">
+        <!-- Фон с плавающими элементами -->
+        <div class="main-bg">
+            <div class="bg-overlay"></div>
+            <!-- Плавающие элементы -->
+            <div class="floating-element fe-1">
+                <i class="fas fa-microchip"></i>
+            </div>
+            <div class="floating-element fe-2">
+                <i class="fas fa-desktop"></i>
+            </div>
+            <div class="floating-element fe-3">
+                <i class="fas fa-server"></i>
+            </div>
+            <div class="floating-element fe-4">
+                <i class="fas fa-laptop"></i>
+            </div>
+            <div class="floating-element fe-5">
+                <i class="fas fa-memory"></i>
+            </div>
+        </div>
+
+        <!-- Навигация -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-text">ALEX EVENT</span>
+                    <span class="logo-highlight">FIX PC</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="reviews.html">Отзывы</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                </ul>
+                <div class="nav-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+7 (495) 123-45-67</span>
+                </div>
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Герой-секция -->
+        <main class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Профессиональный ремонт компьютеров
+                    </h1>
+                    <p class="hero-description">
+                        Экспресс-диагностика, ремонт любой сложности, настройка ПО и замена компонентов. 
+                        Работаем 24/7, выезжаем на место, гарантия на все услуги.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn btn-primary">Вызвать мастера</a>
+                        <a href="services.html" class="btn btn-secondary">Наши услуги</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Преимущества -->
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Почему выбирают нас</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-image">
+                            <img src="https://steklo-foto.ru/images/phocagallery/2018/3/steklo-foto%2078.jpg">
+                            <div class="image-overlay"></div>
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Работаем 24/7</h3>
+                            <p class="feature-description">
+                                Выезд мастера в любое время суток, включая выходные и праздничные дни.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-image">
+                            <img src="https://avatars.dzeninfra.ru/get-zen_doc/3994559/pub_60292889c219c97e32a3aa38_624040a981af7b0dd990bf05/scale_1200" alt="Опытные специалисты">
+                            <div class="image-overlay"></div>
+                            <div class="feature-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Опытные специалисты</h3>
+                            <p class="feature-description">
+                                Наши мастера имеют сертификаты и 5+ лет опыта работы.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-image">
+                            <img src="https://avatars.mds.yandex.net/i?id=99b870c5ad0c10d2c02156ec04e8c8c9f075ff6f-11835812-images-thumbs&n=13" alt="Прозрачные цены">
+                            <div class="image-overlay"></div>
+                            <div class="feature-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Прозрачные цены</h3>
+                            <p class="feature-description">
+                                Фиксированная стоимость услуг. Никаких скрытых платежей.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-image">
+                            <img src="https://avatars.mds.yandex.net/i?id=c52b58636dcd0f7ea5867910a36df621_l-8762941-images-thumbs&n=13" alt="Выезд на дом/офис">
+                            <div class="image-overlay"></div>
+                            <div class="feature-icon">
+                                <i class="fas fa-laptop-house"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Выезд на дом/офис</h3>
+                            <p class="feature-description">
+                                Ремонт на дому или в офисе. Забираем технику в сервис и доставляем обратно.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Популярные услуги -->
+        <section class="popular-services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Популярные услуги</h2>
+                    <p class="section-subtitle">Самые востребованные виды ремонта</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://avatars.mds.yandex.net/get-ydo/6058772/2a00000180fd6b85412bcba3ce2b23f40fb9/diploma" alt="Диагностика и ремонт">
+                            <div class="image-overlay"></div>
+                            <div class="service-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Диагностика и ремонт</h3>
+                            <p>Бесплатная диагностика при ремонте. Определяем причину поломки.</p>
+                            <div class="service-price">от 500 ₽</div>
+                            <a href="services.html" class="service-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://avatars.mds.yandex.net/i?id=86b93d4d30b97fdc177b1334068b78cc_l-4450484-images-thumbs&n=13" alt="Удаление вирусов">
+                            <div class="image-overlay"></div>
+                            <div class="service-icon">
+                                <i class="fas fa-virus-slash"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Удаление вирусов</h3>
+                            <p>Полная очистка системы от вредоносного ПО, настройка защиты.</p>
+                            <div class="service-price">от 1000 ₽</div>
+                            <a href="services.html" class="service-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://i.pinimg.com/originals/2c/60/7b/2c607b186e80d33f8568888da1f3b9b3.jpg" alt="Замена комплектующих">
+                            <div class="image-overlay"></div>
+                            <div class="service-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Замена комплектующих</h3>
+                            <p>Замена любых компонентов с гарантией на детали и работу.</p>
+                            <div class="service-price">от 800 ₽</div>
+                            <a href="services.html" class="service-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-cta">
+                    <a href="services.html" class="btn btn-outline">Все услуги</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- О компании -->
+        <section class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">Alex Event Fix PC</h2>
+                        <p class="about-description">
+                            Мы работаем на рынке ремонта компьютеров с 2013 года. 
+                            За это время мы собрали команду профессионалов, 
+                            открыли собственный сервисный центр и помогли более 
+                            5000 клиентам.
+                        </p>
+                        <p class="about-description">
+                            Наша философия — честность, качество и скорость. 
+                            Мы не навязываем ненужные услуги и используем только 
+                            оригинальные комплектующие.
+                        </p>
+                        <div class="company-stats">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="10">0</div>
+                                <div class="stat-label">Лет опыта</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="5000">0</div>
+                                <div class="stat-label">Довольных клиентов</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="24">0</div>
+                                <div class="stat-label">Часа в сутки</div>
+                            </div>
+                        </div>
+                        <a href="about.html" class="btn btn-primary">Подробнее о компании</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://unite-it.ru/wp-content/uploads/2024/02/computer.webp" alt="Наш сервисный центр">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Последние работы -->
+        <section class="recent-works">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Последние работы</h2>
+                    <p class="section-subtitle">Примеры выполненных ремонтов</p>
+                </div>
+                <div class="works-grid">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="https://avatars.mds.yandex.net/i?id=ca57ee532db203c178de0d5221c3a0f1_l-9065925-images-thumbs&n=13" alt="Ремонт ноутбука">
+                            <div class="image-overlay"></div>
+                            <div class="work-category">Ремонт ноутбука</div>
+                        </div>
+                        <div class="work-content">
+                            <h3>Замена матрицы ноутбука ASUS</h3>
+                            <p>Клиент обратился с проблемой — разбитый экран после падения.</p>
+                            <div class="work-meta">
+                                <span><i class="fas fa-clock"></i> 2 часа</span>
+                                <span><i class="fas fa-ruble-sign"></i> 4 500 ₽</span>
+                            </div>
+                            <a href="portfolio.html" class="work-link">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="https://avatars.mds.yandex.net/i?id=ceecf29d48d47f6cf8d78cf68c3ffc9d174d0a56-16339581-images-thumbs&n=13" alt="Сборка ПК">
+                            <div class="image-overlay"></div>
+                            <div class="work-category">Сборка ПК</div>
+                        </div>
+                        <div class="work-content">
+                            <h3>Сборка игрового компьютера</h3>
+                            <p>Клиенту требовалась мощная система для современных игр.</p>
+                            <div class="work-meta">
+                                <span><i class="fas fa-clock"></i> 1 день</span>
+                                <span><i class="fas fa-ruble-sign"></i> 85 000 ₽</span>
+                            </div>
+                            <a href="portfolio.html" class="work-link">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="https://avatars.mds.yandex.net/i?id=f3b167fe22fb0b550a0ec4f23e19aa29_l-7546740-images-thumbs&n=13" alt="Восстановление данных">
+                            <div class="image-overlay"></div>
+                            <div class="work-category">Восстановление данных</div>
+                        </div>
+                        <div class="work-content">
+                            <h3>Восстановление данных с жесткого диска</h3>
+                            <p>После сбоя системы клиент потерял доступ к важным файлам.</p>
+                            <div class="work-meta">
+                                <span><i class="fas fa-clock"></i> 6 часов</span>
+                                <span><i class="fas fa-ruble-sign"></i> 3 200 ₽</span>
+                            </div>
+                            <a href="portfolio.html" class="work-link">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-cta">
+                    <a href="blog.html" class="btn btn-outline">Все работы</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA секция -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Нужен срочный ремонт компьютера?</h2>
+                    <p>Оставьте заявку и наш мастер свяжется с вами в течение 15 минут</p>
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-phone-alt"></i> Вызвать мастера
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <span class="logo-text">ALEX EVENT</span>
+                            <span class="logo-highlight">FIX PC</span>
+                        </div>
+                        <p class="footer-description">
+                            Профессиональный ремонт и обслуживание компьютеров в Москве с 2013 года.
+                        </p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Страницы</h3>
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="services.html">Услуги</a></li>
+                            <li><a href="about.html">О компании</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contacts">
+                        <h3>Контакты</h3>
+                        <ul>
+                            <li><i class="fas fa-phone-alt"></i> +7 (495) 123-45-67</li>
+                            <li><i class="fas fa-envelope"></i> info@alexeventfixpc.ru</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Компьютерная, 15</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Alex Event Fix PC. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Кнопка наверх -->
+    <button class="scroll-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
