@@ -35,7 +35,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -130,7 +130,7 @@
 
         .contestants-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 25px;
         }
 
@@ -145,6 +145,7 @@
         .contestant-card:hover {
             box-shadow: 0 6px 12px rgba(0,0,0,0.12);
             border-color: #2c3e50;
+            transform: translateY(-5px);
         }
 
         .card-header {
@@ -185,6 +186,7 @@
         .preview-link:hover {
             background-color: #fff;
             color: #2c3e50;
+            transform: translateY(-2px);
         }
 
         .card-footer {
@@ -300,6 +302,27 @@
             font-size: 0.95rem;
         }
 
+        .participant-name {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .work-features {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .work-features i {
+            color: #2c3e50;
+            margin-right: 5px;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -322,6 +345,23 @@
             .card-footer {
                 flex-direction: column;
                 gap: 5px;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .contestants-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .contestants-grid {
+                grid-template-columns: repeat(4, 1fr);
             }
         }
     </style>
@@ -383,51 +423,101 @@
                     <h4><i class="fas fa-cogs"></i> Функциональность</h4>
                     <p>Работоспособность всех элементов, отсутствие ошибок, скорость загрузки.</p>
                 </div>
+                <div class="criteria-item">
+                    <h4><i class="fas fa-lightbulb"></i> Креативность</h4>
+                    <p>Оригинальность идеи, нестандартные решения, творческий подход.</p>
+                </div>
             </div>
         </div>
 
         <section class="contestants-section">
-            <h2 class="section-title">РАБОТЫ УЧАСТНИКОВ</h2>
+            <h2 class="section-title">4 РАБОТЫ УЧАСТНИКОВ</h2>
             <div class="contestants-grid">
+                <!-- Работа 1 -->
                 <div class="contestant-card">
                     <div class="card-header">
                         <h3>ВЕБ-СТРАНИЦА #1</h3>
                     </div>
                     <div class="card-body">
+                        <div class="participant-name">
+                            <i class="fas fa-user"></i> Участник: Алексей
+                        </div>
                         <a href="Alex/index1.html" target="_blank" class="preview-link">
-                            <i class="fas fa-external-link-alt"></i> ПРОСМОТР РАБОТЫ
+                            <i class="fas fa-external-link-alt"></i> ПРОСМОТР РАБОТЫ #1
                         </a>
+                        <div class="work-features">
+                            <p><i class="fas fa-star"></i> <strong>Особенности:</strong> Современный дизайн, анимации, адаптивная верстка</p>
+                        </div>
                     </div>
                     <div class="card-footer">
                         <span><i class="fas fa-code"></i> HTML, CSS, JavaScript</span>
+                        <span><i class="fas fa-calendar"></i> 18.12.2025</span>
                     </div>
                 </div>
 
+                <!-- Работа 2 -->
                 <div class="contestant-card">
                     <div class="card-header">
                         <h3>ВЕБ-СТРАНИЦА #2</h3>
                     </div>
                     <div class="card-body">
+                        <div class="participant-name">
+                            <i class="fas fa-user"></i> Участник: Александр
+                        </div>
                         <a href="alex-event-pc-fix/index.html" target="_blank" class="preview-link">
-                            <i class="fas fa-external-link-alt"></i> ПРОСМОТР РАБОТЫ
+                            <i class="fas fa-external-link-alt"></i> ПРОСМОТР РАБОТЫ #2
                         </a>
+                        <div class="work-features">
+                            <p><i class="fas fa-star"></i> <strong>Особенности:</strong> Темная тема, интерактивные элементы, модальные окна</p>
+                        </div>
                     </div>
                     <div class="card-footer">
                         <span><i class="fas fa-code"></i> HTML, CSS, JavaScript</span>
+                        <span><i class="fas fa-calendar"></i> 18.12.2025</span>
                     </div>
                 </div>
 
+                <!-- Работа 3 -->
                 <div class="contestant-card">
                     <div class="card-header">
                         <h3>ВЕБ-СТРАНИЦА #3</h3>
                     </div>
                     <div class="card-body">
+                        <div class="participant-name">
+                            <i class="fas fa-user"></i> Участник: Николай
+                        </div>
                         <a href="Kolya/index3.html" target="_blank" class="preview-link">
-                            <i class="fas fa-external-link-alt"></i> ПРОСМОТР РАБОТЫ
+                            <i class="fas fa-external-link-alt"></i> ПРОСМОТР РАБОТЫ #3
                         </a>
+                        <div class="work-features">
+                            <p><i class="fas fa-star"></i> <strong>Особенности:</strong> Чистый дизайн, хорошая типографика, удобная навигация</p>
+                        </div>
                     </div>
                     <div class="card-footer">
                         <span><i class="fas fa-code"></i> HTML, CSS, JavaScript</span>
+                        <span><i class="fas fa-calendar"></i> 18.12.2025</span>
+                    </div>
+                </div>
+
+                <!-- Работа 4 -->
+                <div class="contestant-card">
+                    <div class="card-header">
+                        <h3>ВЕБ-СТРАНИЦА #4</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="participant-name">
+                            <i class="fas fa-user"></i> Участник: Максим
+                        </div>
+                        <a href="Maxim/index4.html" target="_blank" class="preview-link">
+                            <i class="fas fa-external-link-alt"></i> ПРОСМОТР РАБОТЫ #4
+                        </a>
+                        <div class="work-features">
+                            <p><i class="fas fa-star"></i> <strong>Особенности:</strong> Инновационный подход, интерактивная карта, формы обратной связи</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span><i class="fas fa-code"></i> HTML, CSS, JavaScript</span>
+                        <span><i class="fas fa-calendar"></i> 18.12.2025</span>
                     </div>
                 </div>
             </div>
@@ -460,11 +550,15 @@
                     <i class="fas fa-gavel"></i>
                     <span><strong>Решение жюри:</strong> В случае спорных ситуаций окончательное решение принимает жюри конкурса.</span>
                 </li>
+                <li>
+                    <i class="fas fa-users"></i>
+                    <span><strong>Количество участников:</strong> В конкурсе участвуют 4 работы от 4 разных авторов.</span>
+                </li>
             </ul>
         </section>
 
         <footer>
-            <p>КОНКУРС ВЕБ-СТРАНИЦ &copy; 2025. Все права защищены.</p>
+            <p>КОНКУРС ВЕБ-СТРАНИЦ &copy; 2025 | 4 работы участников | Все права защищены.</p>
         </footer>
     </div>
 
@@ -483,42 +577,70 @@
             const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
             const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
             
             document.querySelector('.timer').innerHTML = `
                 <p>До окончания голосования осталось: 
-                <span class="deadline">${days} дней ${hours} часов ${minutes} минут</span></p>
+                <span class="deadline">${days} дней ${hours} часов ${minutes} минут ${seconds} секунд</span></p>
             `;
         }
         
-        // Обновляем таймер каждую минуту
-        setInterval(updateCountdown, 60000);
+        // Обновляем таймер каждую секунду
+        setInterval(updateCountdown, 1000);
         updateCountdown();
         
-        // Добавляем строгий эффект при наведении на карточки
+        // Анимация карточек при наведении
         document.querySelectorAll('.contestant-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
-                this.style.borderColor = '#2c3e50';
-                this.style.boxShadow = '0 6px 12px rgba(0,0,0,0.12)';
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.15)';
             });
             
             card.addEventListener('mouseleave', function() {
-                this.style.borderColor = '#ddd';
+                this.style.transform = 'translateY(0)';
                 this.style.boxShadow = '0 3px 6px rgba(0,0,0,0.08)';
             });
         });
         
-        // Эффект для кнопок
-        document.querySelectorAll('a').forEach(link => {
-            link.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-2px)';
-            });
+        // Подсчет количества участников
+        document.addEventListener('DOMContentLoaded', function() {
+            const participantCount = document.querySelectorAll('.contestant-card').length;
+            const countElement = document.querySelector('.section-title');
+            if (countElement) {
+                countElement.textContent = `${participantCount} РАБОТЫ УЧАСТНИКОВ`;
+            }
             
-            link.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
+            // Анимация появления карточек
+            const cards = document.querySelectorAll('.contestant-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+        
+        // Плавный скролл для ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
 </body>
 </html>
-
-
