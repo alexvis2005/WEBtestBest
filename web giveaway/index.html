@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TechFix - Компьютерный сервисный центр</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+		<link rel="stylesheet" href="css/mobile-menu.css" />
+		<!-- <link rel="stylesheet" href="css/themes.css" /> -->
+		<!-- <link rel="stylesheet" href="css/fixes.css" /> -->
+	</head>
+	<body class="default-theme">
+		<!-- Preloader -->
+		<div class="preloader">
+			<div class="loader">
+				<div class="cpu-icon">
+					<i class="fas fa-microchip"></i>
+				</div>
+				<div class="loading-text">Загрузка...</div>
+			</div>
+		</div>
+
+		<!-- Theme Switcher для десктопа -->
+		<!-- <div class="theme-switcher desktop-theme-switcher" id="themeSwitcher">
+			<button class="theme-switcher-toggle">
+				<i class="fas fa-palette"></i>
+			</button>
+			<button class="theme-btn" data-theme="light">
+				<i class="fas fa-sun"></i>
+			</button>
+			<button class="theme-btn" data-theme="default">
+				<i class="fas fa-moon"></i>
+			</button>
+			<button class="theme-btn" data-theme="new-year">
+				<i class="fas fa-tree"></i>
+			</button>
+		</div> -->
+
+		<!-- Scroll to Top Button -->
+		<button class="scroll-top">
+			<i class="fas fa-chevron-up"></i>
+		</button>
+
+		<!-- Header -->
+		<header class="header">
+			<div class="container">
+				<nav class="navbar">
+					<a href="index.html" class="logo">
+						<i class="fas fa-laptop-code"></i>
+						<span>TechFix</span>
+					</a>
+
+					<!-- Theme Switcher для мобильной версии -->
+					<div
+						class="theme-switcher mobile-theme-switcher"
+						id="mobileThemeSwitcher"
+					>
+						<button class="theme-switcher-toggle">
+							<i class="fas fa-palette"></i>
+						</button>
+						<button class="theme-btn" data-theme="light">
+							<i class="fas fa-sun"></i>
+						</button>
+						<button class="theme-btn" data-theme="default">
+							<i class="fas fa-moon"></i>
+						</button>
+						<button class="theme-btn" data-theme="dark-blue">
+							<i class="fas fa-star"></i>
+						</button>
+						<button class="theme-btn" data-theme="new-year">
+							<i class="fas fa-tree"></i>
+						</button>
+					</div>
+
+					<ul class="nav-menu">
+						<li class="nav-item">
+							<a href="index.html" class="nav-link active">Главная</a>
+						</li>
+						<li class="nav-item">
+							<a href="services.html" class="nav-link">Услуги</a>
+						</li>
+						<li class="nav-item">
+							<a href="about.html" class="nav-link">О нас</a>
+						</li>
+						<li class="nav-item">
+							<a href="contacts.html" class="nav-link">Контакты</a>
+						</li>
+						<li class="nav-item mobile-only">
+							<a
+								href="#repair-form"
+								class="btn btn-primary nav-btn mobile-only modal-open-btn"
+								>Заявка на ремонт</a
+							>
+						</li>
+					</ul>
+
+					<a
+						href="#repair-form"
+						class="btn btn-primary nav-btn desktop-only modal-open-btn"
+						>Заявка на ремонт</a
+					>
+
+					<div class="hamburger">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero" id="home">
+			<div class="container">
+				<div class="hero-content animate__animated animate__fadeInUp">
+					<h1 class="hero-title">
+						Профессиональный ремонт компьютеров и ноутбуков
+					</h1>
+					<p class="hero-subtitle">
+						Быстро, качественно, с гарантией. Вернем вашу технику к жизни!
+					</p>
+					<div class="hero-buttons">
+						<a href="#contact" class="btn btn-primary btn-large smooth-scroll"
+							>Связаться с нами</a
+						>
+						<a
+							href="#services"
+							class="btn btn-secondary btn-large smooth-scroll"
+							>Наши услуги</a
+						>
+					</div>
+				</div>
+				<div class="hero-image animate__animated animate__fadeInRight">
+					<img
+						src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+						alt="Ремонт компьютеров"
+					/>
+				</div>
+			</div>
+			<div class="hero-wave">
+				<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path
+						d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+					></path>
+				</svg>
+			</div>
+		</section>
+
+		<!-- Services Preview -->
+		<section class="services-preview" id="services">
+			<div class="container">
+				<h2 class="section-title">Наши услуги</h2>
+				<p class="section-subtitle">
+					Мы предлагаем полный спектр услуг по ремонту и обслуживанию
+					компьютерной техники
+				</p>
+
+				<div class="services-grid">
+					<div class="service-card">
+						<div class="service-icon">
+							<i class="fas fa-desktop"></i>
+						</div>
+						<h3>Ремонт ПК</h3>
+						<p>Диагностика и ремонт стационарных компьютеров любой сложности</p>
+						<a href="services.html#pc" class="service-link"
+							>Подробнее <i class="fas fa-arrow-right"></i
+						></a>
+					</div>
+
+					<div class="service-card">
+						<div class="service-icon">
+							<i class="fas fa-laptop"></i>
+						</div>
+						<h3>Ремонт ноутбуков</h3>
+						<p>Чистка, замена компонентов, ремонт матриц и клавиатур</p>
+						<a href="services.html#laptop" class="service-link"
+							>Подробнее <i class="fas fa-arrow-right"></i
+						></a>
+					</div>
+
+					<div class="service-card">
+						<div class="service-icon">
+							<i class="fas fa-database"></i>
+						</div>
+						<h3>Восстановление данных</h3>
+						<p>Спасем ваши файлы с поврежденных жестких дисков и SSD</p>
+						<a href="services.html#data" class="service-link"
+							>Подробнее <i class="fas fa-arrow-right"></i
+						></a>
+					</div>
+
+					<div class="service-card">
+						<div class="service-icon">
+							<i class="fas fa-virus"></i>
+						</div>
+						<h3>Удаление вирусов</h3>
+						<p>Очистка системы от вредоносных программ и настройка защиты</p>
+						<a href="services.html#virus" class="service-link"
+							>Подробнее <i class="fas fa-arrow-right"></i
+						></a>
+					</div>
+				</div>
+
+				<div class="text-center">
+					<a href="services.html" class="btn btn-outline">Все услуги</a>
+				</div>
+			</div>
+
+			<!-- Wave after services -->
+			<div class="services-wave">
+				<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path
+						d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+					></path>
+				</svg>
+			</div>
+		</section>
+
+		<!-- Advantages -->
+		<section class="advantages" id="advantages">
+			<div class="container">
+				<h2 class="section-title">Почему выбирают нас</h2>
+
+				<div class="advantages-grid">
+					<div class="advantage-item">
+						<div class="advantage-number">01</div>
+						<h3>Бесплатная диагностика</h3>
+						<p>
+							Проведем полную диагностику вашего устройства совершенно бесплатно
+						</p>
+					</div>
+
+					<div class="advantage-item">
+						<div class="advantage-number">02</div>
+						<h3>Гарантия до 2 лет</h3>
+						<p>
+							Предоставляем гарантию на все виды работ и установленные
+							компоненты
+						</p>
+					</div>
+
+					<div class="advantage-item">
+						<div class="advantage-number">03</div>
+						<h3>Выезд мастера</h3>
+						<p>Приедем к вам домой или в офис для ремонта на месте</p>
+					</div>
+
+					<div class="advantage-item">
+						<div class="advantage-number">04</div>
+						<h3>Прозрачные цены</h3>
+						<p>
+							Никаких скрытых платежей. Стоимость оговаривается до начала работ
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Wave after advantages -->
+			<div class="advantages-wave">
+				<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path
+						d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+					></path>
+				</svg>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="cta" id="contact">
+			<div class="container">
+				<div class="cta-content">
+					<h2>Готовы решить проблему с компьютером?</h2>
+					<p>Оставьте заявку и мы свяжемся с вами в течение 15 минут</p>
+					<a
+						href="#repair-form"
+						class="btn btn-primary btn-large modal-open-btn"
+						>Оставить заявку</a
+					>
+				</div>
+			</div>
+
+			<!-- Wave after CTA - правильная (не перевернутая) -->
+			<div class="cta-wave">
+				<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path
+						d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+					></path>
+				</svg>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-grid">
+					<div class="footer-col">
+						<a href="index.html" class="logo">
+							<i class="fas fa-laptop-code"></i>
+							<span>TechFix</span>
+						</a>
+						<p>
+							Профессиональный ремонт компьютерной техники с 2010 года.
+							Качество, надежность, гарантия.
+						</p>
+						<div class="social-links">
+							<a href="#"><i class="fab fa-vk"></i></a>
+							<a href="#"><i class="fab fa-telegram"></i></a>
+							<a href="#"><i class="fab fa-whatsapp"></i></a>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+
+					<div class="footer-col">
+						<h3>Услуги</h3>
+						<ul>
+							<li><a href="services.html#pc">Ремонт компьютеров</a></li>
+							<li><a href="services.html#laptop">Ремонт ноутбуков</a></li>
+							<li><a href="services.html#data">Восстановление данных</a></li>
+							<li><a href="services.html#virus">Удаление вирусов</a></li>
+							<li><a href="services.html#setup">Настройка ПО</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-col">
+						<h3>Компания</h3>
+						<ul>
+							<li><a href="about.html">О нас</a></li>
+							<li><a href="about.html#team">Наша команда</a></li>
+							<li><a href="about.html#reviews">Отзывы</a></li>
+							<li><a href="#">Вакансии</a></li>
+							<li><a href="#">Блог</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-col">
+						<h3>Контакты</h3>
+						<ul class="contact-info">
+							<li>
+								<i class="fas fa-map-marker-alt"></i> г. Москва, ул.
+								Техническая, 15
+							</li>
+							<li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+							<li><i class="fas fa-envelope"></i> info@techfix.ru</li>
+							<li>
+								<i class="fas fa-clock"></i> Пн-Пт: 9:00-20:00, Сб-Вс:
+								10:00-18:00
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<p>&copy; 2023 TechFix. Все права защищены.</p>
+					<a href="#">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Модальное окно для формы ремонта -->
+		<div class="modal" id="repairModal">
+			<div class="modal-content">
+				<button class="close-modal">
+					<i class="fas fa-times"></i>
+				</button>
+				<h2 class="modal-title">Заявка на ремонт</h2>
+				<form class="repair-form" id="modalRepairForm">
+					<div class="form-row">
+						<input type="text" placeholder="Ваше имя" required />
+						<input type="tel" placeholder="Телефон" required />
+					</div>
+					<div class="form-row">
+						<input type="email" placeholder="Email" />
+						<select required>
+							<option value="" disabled selected>Тип устройства</option>
+							<option value="pc">Стационарный компьютер</option>
+							<option value="laptop">Ноутбук</option>
+							<option value="monitor">Монитор</option>
+							<option value="other">Другое</option>
+						</select>
+					</div>
+					<textarea placeholder="Опишите проблему..." rows="4"></textarea>
+					<button type="submit" class="btn btn-primary">
+						Отправить заявку
+					</button>
+				</form>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/mobile-menu.js"></script>
+		<!-- <script src="js/theme-switcher.js"></script> -->
+	</body>
+</html>

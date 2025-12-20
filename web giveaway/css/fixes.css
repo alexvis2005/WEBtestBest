@@ -1,0 +1,233 @@
+/* css/fixes.css - Исправления цветовых проблем */
+
+/* ========== ОБЩИЕ ИСПРАВЛЕНИЯ ========== */
+
+/* Убедиться, что все волны видны */
+.hero-wave,
+.services-wave,
+.advantages-wave,
+.cta-wave,
+.page-hero-wave,
+.faq-wave,
+.form-wave {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+/* Сброс конфликтующих стилей из index.css */
+.hero,
+.services-preview,
+.cta {
+	background: inherit !important; /* Наследуем из темы */
+}
+
+/* Сброс цветов волн из index.css */
+.hero-wave path,
+.advantages-wave path,
+.cta-wave path {
+	fill: inherit !important; /* Наследуем из темы */
+}
+
+/* ========== СВЕТЛАЯ ТЕМА ========== */
+
+/* Убедиться, что hero-wave видна */
+.light-theme .hero-wave path {
+	fill: var(--bg-primary) !important; /* Белый */
+}
+
+/* Убедиться, что все волны видны в светлой теме */
+.light-theme .hero-wave,
+.light-theme .services-wave,
+.light-theme .advantages-wave,
+.light-theme .cta-wave {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+/* Исправить цвет advantages в светлой теме */
+.light-theme .advantages {
+	background: var(--bg-tertiary) !important; /* e9ecef */
+}
+
+.light-theme .advantages-wave path {
+	fill: var(--bg-primary) !important; /* Белый */
+}
+
+/* Исправить цвет cta-wave в светлой теме */
+.light-theme .cta-wave path {
+	fill: var(--bg-footer) !important; /* 343a40 */
+}
+
+/* ========== ТЕМНАЯ ТЕМА (DEFAULT) ========== */
+
+/* Убедиться, что hero-wave видна в темной теме */
+.default-theme .hero-wave path {
+	fill: var(--dark-light) !important; /* 2d2d44 */
+}
+
+.default-theme .hero-wave {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+/* Убедиться, что цвет волн правильный */
+.default-theme .hero-wave path {
+	fill: var(--dark-light) !important;
+}
+
+.default-theme .advantages-wave path {
+	fill: var(--bg-primary) !important;
+}
+
+.default-theme .cta-wave path {
+	fill: var(--bg-footer) !important;
+}
+
+/* ========== НОВОГОДНЯЯ ТЕМА ========== */
+
+/* Убедиться, что все волны видны */
+.new-year-theme .hero-wave,
+.new-year-theme .services-wave,
+.new-year-theme .advantages-wave,
+.new-year-theme .cta-wave {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+/* Исправить цвета волн для новогодней темы */
+.new-year-theme .hero-wave path {
+	fill: var(--bg-primary) !important; /* 15242b */
+}
+
+.new-year-theme .services-wave path {
+	fill: var(--bg-primary) !important; /* 1a2d34 */
+}
+
+.new-year-theme .advantages-wave path {
+	fill: var(--bg-secondary) !important; /* 15242b */
+}
+
+.new-year-theme .advantages {
+	background: var(--bg-secondary) !important; /* 15242b */
+}
+
+.new-year-theme .cta-wave path {
+	fill: var(--bg-footer) !important; /* 0d1b1f */
+}
+
+/* ========== ИСПРАВЛЕНИЯ ДЛЯ index.css ========== */
+
+/* Переопределить жесткие цвета в index.css */
+.hero {
+	background: linear-gradient(
+		135deg,
+		var(--bg-primary) 0%,
+		var(--dark-light) 100%
+	) !important;
+}
+
+.hero-wave path {
+	fill: var(--dark-light) !important;
+}
+
+.services-preview {
+	background: var(--dark-light) !important;
+}
+
+.cta {
+	background: var(--bg-primary) !important;
+}
+
+.cta-wave path {
+	fill: var(--bg-footer) !important;
+}
+
+/* ========== ПРИОРИТЕТ ДЛЯ ТЕМ ========== */
+
+/* Светлая тема должна переопределять index.css */
+.light-theme .hero {
+	background: var(--bg-primary) !important;
+}
+
+.light-theme .hero-wave path {
+	fill: var(--bg-primary) !important;
+}
+
+.light-theme .services-preview {
+	background: var(--bg-primary) !important;
+}
+
+.light-theme .services-wave path {
+	fill: var(--bg-tertiary) !important;
+}
+
+.light-theme .advantages {
+	background: var(--bg-tertiary) !important;
+}
+
+.light-theme .advantages-wave path {
+	fill: var(--bg-primary) !important;
+}
+
+.light-theme .cta {
+	background: var(--bg-primary) !important;
+}
+
+.light-theme .cta-wave path {
+	fill: var(--bg-footer) !important;
+}
+
+/* Темная тема (default) */
+.default-theme .hero {
+	background: var(--bg-primary) !important;
+}
+
+/* .default-theme .hero-wave path {
+	fill: var(--dark-light) !important;
+} */
+
+.default-theme .services-preview {
+	background: var(--dark-light) !important;
+}
+
+.default-theme .advantages-wave path {
+	fill: var(--bg-primary) !important;
+}
+
+.default-theme .cta {
+	background: var(--bg-primary) !important;
+}
+
+.default-theme .cta-wave path {
+	fill: var(--bg-footer) !important;
+}
+
+/* Новогодняя тема */
+.new-year-theme .hero {
+	background: var(--bg-primary) !important;
+}
+
+.new-year-theme .services-preview {
+	background: var(--bg-primary) !important;
+}
+
+.new-year-theme .services-wave path {
+	fill: var(--bg-secondary) !important;
+}
+
+.new-year-theme .advantages {
+	background: var(--bg-secondary) !important;
+}
+
+.new-year-theme .advantages-wave path {
+	fill: var(--bg-primary) !important;
+}
+
+.new-year-theme .cta {
+	background: var(--bg-primary) !important;
+}
+
+.new-year-theme .cta-wave path {
+	fill: var(--dark) !important;
+}

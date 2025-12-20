@@ -1,0 +1,1187 @@
+/* css/themes.css - Темы оформления (исправленная версия) */
+
+/* ========== КОРНЕВЫЕ ПЕРЕМЕННЫЕ ДЛЯ ВСЕХ ТЕМ ========== */
+:root {
+	/* Общие переменные, которые есть во всех темах */
+	--transition: all 0.3s ease;
+	--border-radius: 12px;
+	--border-radius-sm: 8px;
+	--box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	--box-shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
+	--box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== СВЕТЛАЯ ТЕМА ========== */
+.light-theme {
+	/* Цветовая палитра */
+	--primary: #3a5cef;
+	--primary-dark: #2a4bdf;
+	--primary-light: #5a7dff;
+	--secondary: #ff6b6b;
+	--secondary-dark: #ff5252;
+	--success: #00b894;
+	--warning: #fdcb6e;
+	--danger: #ff7675;
+
+	/* Фоны */
+	--bg-primary: #ffffff;
+	--bg-secondary: #f8f9fa;
+	--bg-tertiary: #e9ecef;
+	--bg-card: #ffffff;
+	--bg-modal: #ffffff;
+	--bg-footer: #343a40;
+	--bg-dark: #1a1a2e; /* Для совместимости с services.css */
+
+	/* Текст */
+	--text-primary: #1a1a2e;
+	--text-secondary: #495057;
+	--text-tertiary: #6c757d;
+	--text-light: #ffffff;
+	--text-muted: #868e96;
+
+	/* Границы */
+	--border-color: #e9ecef;
+	--border-color-light: #dee2e6;
+	--border-color-dark: #ced4da;
+
+	/* Тени */
+	--shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	--shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
+	--shadow-dark: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+	/* Эффекты */
+	--overlay-light: rgba(255, 255, 255, 0.9);
+	--overlay-dark: rgba(0, 0, 0, 0.05);
+	--glass-bg: rgba(255, 255, 255, 0.95);
+	--glass-border: rgba(255, 255, 255, 0.2);
+}
+
+/* ========== ОСНОВНЫЕ СТИЛИ ДЛЯ СВЕТЛОЙ ТЕМЫ ========== */
+
+/* Body и базовые элементы */
+.light-theme body {
+	background-color: var(--bg-secondary);
+	color: var(--text-primary);
+}
+
+/* Заголовки */
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+.light-theme h4 {
+	color: var(--text-primary);
+}
+
+/* Текст */
+.light-theme p {
+	color: var(--text-secondary);
+}
+
+/* ========== HEADER И НАВИГАЦИЯ ========== */
+.light-theme .header {
+	background: var(--glass-bg);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid var(--border-color);
+}
+
+.light-theme .logo {
+	color: var(--text-primary);
+}
+
+.light-theme .logo i {
+	color: var(--primary);
+}
+
+.light-theme .nav-link {
+	color: var(--text-primary);
+}
+
+.light-theme .nav-link:hover,
+.light-theme .nav-link.active {
+	color: var(--primary);
+}
+
+.light-theme .nav-link::after {
+	background: var(--primary);
+}
+
+/* Хамбургер меню */
+.light-theme .hamburger .bar {
+	background: var(--text-primary);
+}
+
+/* ========== КНОПКИ ========== */
+.light-theme .btn-primary {
+	background: var(--primary);
+	color: var(--text-light);
+}
+
+.light-theme .btn-primary:hover {
+	background: var(--primary-dark);
+}
+
+.light-theme .btn-secondary {
+	background: var(--secondary);
+	color: var(--text-light);
+}
+
+.light-theme .btn-secondary:hover {
+	background: var(--secondary-dark);
+}
+
+.light-theme .btn-outline {
+	background: transparent;
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+.light-theme .btn-outline:hover {
+	background: var(--primary);
+	color: var(--text-light);
+}
+
+/* ========== HERO СЕКЦИИ ========== */
+.light-theme .hero,
+.light-theme .page-hero {
+	background: var(--bg-primary);
+}
+
+.light-theme .hero-title,
+.light-theme .page-title {
+	color: var(--text-primary);
+}
+
+.light-theme .hero-subtitle,
+.light-theme .page-subtitle {
+	color: var(--text-secondary);
+}
+
+/* ========== ВОЛНЫ НА ГЛАВНОЙ СТРАНИЦЕ (СВЕТЛАЯ ТЕМА) ========== */
+
+/* Герой -> Сервисы (белый к белому) */
+.light-theme .hero {
+	background: var(--bg-primary);
+}
+
+.light-theme .hero-wave path {
+	fill: var(--bg-primary); /* Белый */
+}
+
+/* Сервисы -> Преимущества (белый к светло-серому) */
+.light-theme .services-preview {
+	background: var(--bg-primary);
+}
+
+.light-theme .services-wave path {
+	fill: var(--bg-tertiary); /* Светло-серый #e9ecef */
+}
+
+/* Преимущества -> CTA (светло-серый к белому) */
+.light-theme .advantages {
+	background: var(--bg-tertiary) !important; /* #e9ecef */
+}
+
+.light-theme .advantages-wave path {
+	fill: var(--bg-primary) !important; /* Белый */
+}
+
+/* CTA -> Футер (белый к темно-серому) */
+.light-theme .cta {
+	background: var(--bg-primary);
+}
+
+.light-theme .cta-wave path {
+	fill: var(--bg-footer) !important; /* #343a40 */
+}
+
+/* ========== ВОЛНЫ НА СТРАНИЦЕ УСЛУГ (СВЕТЛАЯ ТЕМА) ========== */
+
+/* Page Hero -> Services Main (белый к белому) */
+.light-theme .page-hero {
+	background: var(--bg-primary);
+}
+
+.light-theme .page-hero-wave path {
+	fill: var(--bg-primary); /* Белый */
+}
+
+/* FAQ -> Stats (светло-серый к белому) */
+.light-theme .faq-section {
+	background: var(--bg-tertiary) !important;
+}
+
+.light-theme .faq-wave path {
+	fill: var(--bg-primary) !important;
+}
+
+/* Form -> Footer (белый к темно-серому) */
+.light-theme .service-form-section {
+	background: var(--bg-primary);
+}
+
+.light-theme .form-wave path {
+	fill: var(--bg-footer); /* Темно-серый #343a40 */
+}
+
+/* ========== КАРТОЧКИ СЕРВИСОВ - ИСПРАВЛЕНА ПЕРСПЕКТИВА ========== */
+.light-theme .service-category {
+	background: var(--bg-card);
+	border: 1px solid var(--border-color);
+	box-shadow: var(--shadow-light);
+	/* Убираем проблемную 3D трансформацию */
+	transform-style: flat;
+	perspective: none;
+}
+
+.light-theme .service-category:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--shadow);
+	border-color: var(--primary);
+}
+
+/* Убираем анимацию before которая вызывала проблемы */
+.light-theme .service-category::before {
+	display: none;
+}
+
+/* ========== СЕРВИСЫ ========== */
+.light-theme .services-preview,
+.light-theme .services-main,
+.light-theme .services-intro,
+.light-theme .services-grid {
+	background: var(--bg-primary);
+}
+
+.light-theme .section-title {
+	color: var(--text-primary);
+}
+
+.light-theme .section-title::after {
+	background: var(--primary);
+}
+
+.light-theme .section-subtitle {
+	color: var(--text-secondary);
+}
+
+/* Карточки услуг на главной */
+.light-theme .service-card {
+	background: var(--bg-card);
+	border: 1px solid var(--border-color);
+	box-shadow: var(--shadow-light);
+	transition: var(--transition);
+}
+
+.light-theme .service-card:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--shadow);
+	border-color: var(--primary-light);
+}
+
+.light-theme .service-card h3 {
+	color: var(--text-primary);
+}
+
+.light-theme .service-card p {
+	color: var(--text-secondary);
+}
+
+.light-theme .service-icon {
+	background: rgba(58, 92, 239, 0.1);
+	color: var(--primary);
+}
+
+.light-theme .service-link {
+	color: var(--primary);
+}
+
+/* Карточки услуг на странице услуг */
+.light-theme .service-category h3 {
+	color: var(--text-primary);
+}
+
+.light-theme .price-tag {
+	color: var(--primary);
+}
+
+.light-theme .service-list li {
+	color: var(--text-secondary);
+}
+
+.light-theme .service-list i {
+	color: var(--success);
+}
+
+.light-theme .time-estimate {
+	color: var(--text-tertiary);
+}
+
+.light-theme .category-icon {
+	background: rgba(58, 92, 239, 0.1);
+	color: var(--primary);
+}
+
+/* ========== ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ ========== */
+.light-theme .theme-switcher {
+	background: var(--glass-bg);
+	border: 1px solid var(--border-color);
+	box-shadow: var(--shadow-light);
+}
+
+.light-theme .theme-switcher.expanded {
+	background: var(--glass-bg);
+	border: 1px solid var(--border-color);
+}
+
+.light-theme .theme-btn {
+	background: var(--bg-tertiary);
+	color: var(--text-secondary);
+	border: 1px solid transparent;
+	transition: var(--transition);
+}
+
+.light-theme .theme-btn:hover {
+	background: var(--bg-secondary);
+}
+
+.light-theme .theme-btn.active {
+	background: var(--primary);
+	color: var(--text-light);
+	border: 1px solid var(--primary-dark);
+	box-shadow: 0 0 15px rgba(58, 92, 239, 0.3);
+}
+
+.light-theme .theme-switcher-toggle {
+	background: var(--primary);
+	color: var(--text-light);
+	border: 1px solid var(--primary-dark);
+}
+
+.light-theme .theme-switcher-toggle:hover {
+	background: var(--primary-dark);
+}
+
+/* ========== ПРЕИМУЩЕСТВА ========== */
+.light-theme .advantage-item {
+	background: var(--bg-card);
+	border: 1px solid var(--border-color);
+	box-shadow: var(--shadow-light);
+}
+
+.light-theme .advantage-item:hover {
+	box-shadow: var(--shadow);
+	transform: translateY(-3px);
+}
+
+.light-theme .advantage-item h3 {
+	color: var(--text-primary);
+}
+
+.light-theme .advantage-item p {
+	color: var(--text-secondary);
+}
+
+.light-theme .advantage-number {
+	color: var(--primary);
+}
+
+/* ========== FAQ ========== */
+.light-theme .faq-item {
+	background: var(--bg-card);
+	border: 1px solid var(--border-color);
+	box-shadow: var(--shadow-light);
+	transition: var(--transition);
+}
+
+.light-theme .faq-item:hover {
+	box-shadow: var(--shadow);
+	border-color: var(--border-color-dark);
+}
+
+.light-theme .faq-item.active {
+	border-color: var(--primary);
+	box-shadow: 0 8px 25px rgba(58, 92, 239, 0.15);
+}
+
+.light-theme .faq-question {
+	color: var(--text-primary);
+}
+
+.light-theme .faq-question i {
+	color: var(--primary);
+}
+
+.light-theme .faq-answer p {
+	color: var(--text-secondary);
+}
+
+/* ========== СТАТИСТИКА ========== */
+.light-theme .stat-item {
+	background: var(--bg-card);
+	border: 1px solid var(--border-color);
+	box-shadow: var(--shadow-light);
+	transition: var(--transition);
+}
+
+.light-theme .stat-item:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--shadow);
+	border-color: var(--primary-light);
+}
+
+.light-theme .stat-number {
+	color: var(--text-primary);
+}
+
+.light-theme .stat-label {
+	color: var(--text-secondary);
+}
+
+.light-theme .stat-item i {
+	color: var(--primary);
+}
+
+/* ========== ПРОЦЕСС РАБОТЫ ========== */
+.light-theme .process-step {
+	background: var(--bg-card);
+	border: 1px solid var(--border-color);
+	box-shadow: var(--shadow-light);
+	transition: var(--transition);
+}
+
+.light-theme .process-step:hover {
+	transform: translateY(-10px);
+	box-shadow: var(--shadow);
+	border-color: var(--primary-light);
+}
+
+.light-theme .process-step h3 {
+	color: var(--text-primary);
+}
+
+.light-theme .process-step p {
+	color: var(--text-secondary);
+}
+
+.light-theme .step-number {
+	background: var(--primary);
+	color: var(--text-light);
+	box-shadow: 0 4px 10px rgba(58, 92, 239, 0.3);
+}
+
+.light-theme .step-icon {
+	background: rgba(58, 92, 239, 0.1);
+	color: var(--primary);
+}
+
+.light-theme .process-step:hover .step-icon {
+	background: var(--primary);
+	color: var(--text-light);
+}
+
+/* ========== ФОРМЫ ========== */
+.light-theme .form-container {
+	background: var(--bg-secondary);
+	border: 1px solid var(--border-color);
+	box-shadow: var(--shadow);
+}
+
+.light-theme .repair-form {
+	background: var(--bg-secondary);
+	border: 1px solid var(--border-color);
+	box-shadow: var(--shadow-light);
+}
+
+.light-theme .form-group label {
+	color: var(--text-primary);
+}
+
+.light-theme input,
+.light-theme select,
+.light-theme textarea {
+	background: var(--bg-primary);
+	border: 1px solid var(--border-color-light);
+	color: var(--text-primary);
+}
+
+.light-theme input:focus,
+.light-theme select:focus,
+.light-theme textarea:focus {
+	border-color: var(--primary);
+	box-shadow: 0 0 0 3px rgba(58, 92, 239, 0.2);
+}
+
+.light-theme input::placeholder,
+.light-theme textarea::placeholder {
+	color: var(--text-tertiary);
+}
+
+.light-theme .form-note {
+	color: var(--text-tertiary);
+}
+
+/* CTA секция */
+.light-theme .cta {
+	background: linear-gradient(var(--overlay-light), var(--overlay-light)),
+		url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+}
+
+.light-theme .cta h2 {
+	color: var(--text-primary);
+}
+
+.light-theme .cta p {
+	color: var(--text-secondary);
+}
+
+/* ========== ФУТЕР ========== */
+.light-theme .footer {
+	background: var(--bg-footer);
+}
+
+/* Логотип TechFix в футере - БЕЛЫЙ ТЕКСТ */
+.light-theme .footer .logo {
+	color: var(--text-light) !important;
+}
+
+.light-theme .footer .logo i {
+	color: var(--primary) !important;
+}
+
+.light-theme .footer-col h3 {
+	color: var(--text-light);
+}
+
+.light-theme .footer-col h3::after {
+	background: var(--primary);
+}
+
+.light-theme .footer-col ul li a {
+	color: var(--text-muted);
+}
+
+.light-theme .footer-col ul li a:hover {
+	color: var(--text-light);
+}
+
+.light-theme .footer p,
+.light-theme .contact-info li {
+	color: var(--text-light);
+}
+
+.light-theme .contact-info i {
+	color: var(--primary);
+}
+
+.light-theme .social-links a {
+	background: rgba(255, 255, 255, 0.1);
+	color: var(--text-light);
+}
+
+.light-theme .social-links a:hover {
+	background: var(--primary);
+}
+
+.light-theme .footer-bottom {
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.light-theme .footer-bottom p,
+.light-theme .footer-bottom a {
+	color: var(--text-light);
+}
+
+/* ========== МОДАЛЬНЫЕ ОКНА ========== */
+.light-theme .modal-content {
+	background: var(--bg-modal);
+	border: 1px solid var(--border-color);
+	box-shadow: var(--shadow-dark);
+}
+
+.light-theme .modal-title {
+	color: var(--text-primary);
+}
+
+.light-theme .modal-text {
+	color: var(--text-secondary);
+}
+
+.light-theme .modal-icon {
+	color: var(--success);
+}
+
+.light-theme .close-modal {
+	color: var(--text-primary);
+}
+
+.light-theme .close-modal:hover {
+	background: var(--bg-tertiary);
+}
+
+/* ========== SCROLL TO TOP ========== */
+.light-theme .scroll-top {
+	background: var(--primary);
+	color: var(--text-light);
+	box-shadow: var(--shadow);
+}
+
+.light-theme .scroll-top:hover {
+	background: var(--primary-dark);
+	transform: translateY(-5px);
+}
+
+/* ========== PRELOADER ========== */
+.light-theme .preloader {
+	background: var(--bg-primary);
+}
+
+.light-theme .cpu-icon {
+	color: var(--primary);
+}
+
+.light-theme .loading-text {
+	color: var(--text-primary);
+}
+
+/* ========== ТЕМНАЯ ТЕМА (DEFAULT) ========== */
+.default-theme {
+	/* Цветовая палитра */
+	--primary: #3a5cef;
+	--primary-dark: #2a4bdf;
+	--primary-light: #5a7dff;
+	--secondary: #ff6b6b;
+	--secondary-dark: #ff5252;
+	--success: #00b894;
+	--warning: #fdcb6e;
+	--danger: #ff7675;
+
+	/* Фоны */
+	--bg-primary: #1a1a2e;
+	/* --bg-secondary: #2d2d44; */
+	--bg-tertiary: #343a40;
+	--bg-card: rgba(45, 45, 68, 0.95);
+	--bg-modal: #2d2d44;
+	--bg-footer: #343a40;
+	--bg-dark: #1a1a2e;
+
+	/* Текст */
+	--text-primary: #f0f0f0;
+	--text-secondary: #e0e0e0;
+	--text-tertiary: #7a7a8c;
+	--text-light: #ffffff;
+	--text-muted: #868e96;
+
+	/* Границы */
+	--border-color: rgba(255, 255, 255, 0.1);
+	--border-color-light: rgba(255, 255, 255, 0.05);
+	--border-color-dark: rgba(255, 255, 255, 0.15);
+
+	/* Тени */
+	--shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	--shadow-light: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--shadow-dark: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+	/* Эффекты */
+	--overlay-light: rgba(26, 26, 46, 0.95);
+	--overlay-dark: rgba(0, 0, 0, 0.3);
+	--glass-bg: rgba(26, 26, 46, 0.9);
+	--glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* ========== ВОЛНЫ ДЛЯ ТЕМНОЙ ТЕМЫ (DEFAULT) ========== */
+
+/* Герой -> Сервисы (темно-синий к темно-синему) */
+.default-theme .hero {
+	background: var(--bg-primary);
+}
+
+.default-theme .hero-wave path {
+	fill: var(--bg-primary); /* #1a1a2e */
+}
+
+/* Сервисы -> Преимущества (темно-синий к темно-серому) */
+.default-theme .services-preview {
+	background: var(--bg-primary);
+}
+
+/* CTA -> Футер (темно-синий к самому темному) */
+.default-theme .cta {
+	background: var(--bg-primary);
+}
+
+.default-theme .cta-wave path {
+	fill: var(--bg-footer); /* #343a40 */
+}
+
+/* ========== ВОЛНЫ ДЛЯ СТРАНИЦЫ УСЛУГ (DEFAULT) ========== */
+
+/* Page Hero -> Services Main (светло-синий к темно-синему) */
+.default-theme .page-hero {
+	background: var(--bg-secondary);
+}
+
+.default-theme .page-hero-wave path {
+	fill: var(--bg-primary); /* #1a1a2e */
+}
+
+/* Services Main -> FAQ (темно-синий к темно-серому) */
+.default-theme .services-main {
+	background: var(--bg-primary);
+}
+
+.default-theme .faq-wave path {
+	fill: var(--bg-primary) !important; /* #1a1a2e */
+}
+
+.default-theme .services-wave {
+	display: block !important;
+}
+
+/* Form -> Footer (темно-синий к самому темному) */
+.default-theme .service-form-section {
+	background: var(--bg-primary);
+}
+
+.default-theme .form-wave path {
+	fill: var(--bg-footer); /* #343a40 */
+}
+
+/* ========== НОВОГОДНЯЯ ТЕМА ========== */
+.new-year-theme {
+	/* Цветовая палитра */
+	--primary: #d32f2f;
+	--primary-dark: #b71c1c;
+	--primary-light: #f44336;
+	--secondary: #388e3c;
+	--secondary-dark: #2e7d32;
+	--success: #4caf50;
+	--warning: #ff9800;
+	--danger: #f44336;
+
+	/* Фоны */
+	--bg-primary: #1a2d34;
+	--bg-secondary: #15242b;
+	--bg-tertiary: #0d1b1f;
+	--bg-card: rgba(21, 36, 43, 0.95);
+	--bg-modal: #15242b;
+	--bg-footer: #0d1b1f;
+	--bg-dark: #0d1b1f;
+
+	/* Текст */
+	--text-primary: #f5f5f5;
+	--text-secondary: #e0e0e0;
+	--text-tertiary: #bdbdbd;
+	--text-light: #ffffff;
+	--text-muted: #9e9e9e;
+
+	/* Границы */
+	--border-color: rgba(255, 255, 255, 0.15);
+	--border-color-light: rgba(255, 255, 255, 0.1);
+	--border-color-dark: rgba(255, 255, 255, 0.2);
+
+	/* Тени */
+	--shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	--shadow-light: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--shadow-dark: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+	/* Эффекты */
+	--overlay-light: rgba(26, 45, 52, 0.95);
+	--overlay-dark: rgba(0, 0, 0, 0.3);
+	--glass-bg: rgba(26, 45, 52, 0.9);
+	--glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* ========== ВОЛНЫ ДЛЯ НОВОГОДНЕЙ ТЕМЫ ========== */
+
+/* Герой -> Сервисы (средний зелено-синий к среднему) */
+.new-year-theme .hero {
+	background: var(--bg-primary);
+}
+
+.new-year-theme .hero-wave path {
+	fill: var(--bg-primary); /* #1a2d34 */
+}
+
+/* Сервисы -> Преимущества (средний зелено-синий к темному) */
+.new-year-theme .services-preview {
+	background: var(--bg-primary);
+}
+
+.new-year-theme .services-wave path {
+	fill: var(--bg-secondary); /* #15242b */
+}
+
+/* Преимущества -> CTA (темный зелено-синий к среднему) */
+.new-year-theme .advantages {
+	background: var(--bg-secondary) !important; /* #15242b */
+}
+
+.new-year-theme .advantages-wave path {
+	fill: var(--bg-primary) !important; /* #1a2d34 */
+}
+
+/* CTA -> Футер (средний зелено-синий к самому темному) */
+.new-year-theme .cta {
+	background: var(--bg-primary);
+}
+
+.new-year-theme .cta-wave path {
+	fill: var(--bg-footer) !important; /* #0d1b1f */
+}
+
+/* ========== ВОЛНЫ ДЛЯ СТРАНИЦЫ УСЛУГ (НОВОГОДНЯЯ) ========== */
+
+/* Page Hero -> Services Main (темный зелено-синий к среднему) */
+.new-year-theme .page-hero {
+	background: var(--bg-secondary);
+}
+
+.new-year-theme .page-hero-wave path {
+	fill: var(--bg-primary); /* #1a2d34 */
+}
+
+/* Services Main -> FAQ (средний зелено-синий к темному) */
+.new-year-theme .services-main {
+	background: var(--bg-primary);
+}
+
+.new-year-theme .services-wave path {
+	fill: var(--bg-secondary); /* #15242b */
+}
+
+/* FAQ -> Stats (темный зелено-синий к среднему) */
+.new-year-theme .faq-section {
+	background: var(--bg-secondary) !important; /* #15242b */
+}
+
+/* Form -> Footer (средний зелено-синий к самому темному) */
+.new-year-theme .service-form-section {
+	background: var(--bg-primary);
+}
+
+.new-year-theme .form-wave path {
+	fill: var(--bg-footer); /* #0d1b1f */
+}
+
+.new-year-theme .services-wave path,
+.new-year-theme .form-wave path {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+/* ========== ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ ТЕМ ========== */
+
+/* Декоративные элементы для новогодней темы */
+.new-year-theme .hero::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(
+			circle at 20% 30%,
+			rgba(255, 215, 0, 0.1) 0%,
+			transparent 50%
+		),
+		radial-gradient(
+			circle at 80% 70%,
+			rgba(211, 47, 47, 0.1) 0%,
+			transparent 50%
+		),
+		radial-gradient(
+			circle at 40% 80%,
+			rgba(56, 142, 60, 0.1) 0%,
+			transparent 50%
+		);
+	pointer-events: none;
+	z-index: 1;
+}
+
+.new-year-theme .advantages::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(211,47,47,0.1)"/></svg>');
+	background-size: 50px;
+	opacity: 0.3;
+	z-index: 1;
+}
+
+/* Новогодние кнопки */
+.new-year-theme .btn-primary {
+	background: linear-gradient(45deg, var(--primary), #ff6f00);
+	position: relative;
+	overflow: hidden;
+}
+
+.new-year-theme .btn-primary::after {
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: -60%;
+	width: 20%;
+	height: 200%;
+	background: rgba(255, 255, 255, 0.3);
+	transform: rotate(30deg);
+	animation: shine 3s infinite;
+}
+
+/* Контейнеры для новогодних украшений */
+.new-year-theme .snowflakes {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.new-year-theme .garland {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	z-index: 999;
+	pointer-events: none;
+}
+
+/* Снежинки */
+.snowflake {
+	position: absolute;
+	background: white;
+	border-radius: 50%;
+	opacity: 0.8;
+	animation: snowfall linear infinite;
+}
+
+.snowflake.small {
+	width: 5px;
+	height: 5px;
+	animation-duration: 10s;
+}
+
+.snowflake.medium {
+	width: 8px;
+	height: 8px;
+	animation-duration: 15s;
+}
+
+.snowflake.large {
+	width: 12px;
+	height: 12px;
+	animation-duration: 20s;
+}
+
+@keyframes snowfall {
+	0% {
+		transform: translateY(-100px) rotate(0deg);
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(100vh) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+/* Гирлянды */
+.garland-light {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	animation: twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle {
+	0%,
+	100% {
+		opacity: 0.3;
+		transform: scale(0.8);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* Новогодние анимации */
+@keyframes christmasGlow {
+	0% {
+		color: var(--primary);
+		text-shadow: 0 0 5px var(--primary);
+	}
+	100% {
+		color: var(--secondary);
+		text-shadow: 0 0 10px var(--secondary);
+	}
+}
+
+@keyframes shine {
+	0% {
+		left: -60%;
+	}
+	20% {
+		left: 100%;
+	}
+	100% {
+		left: 100%;
+	}
+}
+
+@keyframes swing {
+	0% {
+		transform: rotate(-15deg);
+	}
+	100% {
+		transform: rotate(15deg);
+	}
+}
+
+/* Логотип в новогодней теме */
+.new-year-theme .logo i {
+	animation: christmasGlow 2s infinite alternate;
+}
+
+/* Новогодние украшения */
+.christmas-decoration {
+	position: absolute;
+	font-size: 1.5rem;
+	color: #ffd700;
+	animation: swing 3s infinite alternate;
+	z-index: 1;
+}
+
+/* ========== УТИЛИТАРНЫЕ КЛАССЫ ========== */
+
+/* Для текста */
+.text-primary {
+	color: var(--text-primary) !important;
+}
+
+.text-secondary {
+	color: var(--text-secondary) !important;
+}
+
+.text-tertiary {
+	color: var(--text-tertiary) !important;
+}
+
+.text-light {
+	color: var(--text-light) !important;
+}
+
+/* Для фона */
+.bg-primary {
+	background-color: var(--bg-primary) !important;
+}
+
+.bg-secondary {
+	background-color: var(--bg-secondary) !important;
+}
+
+.bg-tertiary {
+	background-color: var(--bg-tertiary) !important;
+}
+
+.bg-card {
+	background-color: var(--bg-card) !important;
+}
+
+/* Для границ */
+.border-primary {
+	border-color: var(--border-color) !important;
+}
+
+.border-light {
+	border-color: var(--border-color-light) !important;
+}
+
+/* Тени */
+.shadow-regular {
+	box-shadow: var(--shadow) !important;
+}
+
+.shadow-light {
+	box-shadow: var(--shadow-light) !important;
+}
+
+.shadow-dark {
+	box-shadow: var(--shadow-dark) !important;
+}
+
+/* Плавные переходы */
+.transition-all {
+	transition: var(--transition) !important;
+}
+
+/* ========== МЕДИА-ЗАПРОСЫ ========== */
+@media (max-width: 768px) {
+	.light-theme .header,
+	.default-theme .header,
+	.new-year-theme .header {
+		backdrop-filter: none;
+	}
+
+	.light-theme .cta,
+	.default-theme .cta,
+	.new-year-theme .cta {
+		background-attachment: scroll;
+	}
+
+	.christmas-decoration {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	:root {
+		--border-radius: 8px;
+		--border-radius-sm: 6px;
+	}
+
+	.new-year-theme .snowflakes {
+		display: none;
+	}
+}
+
+/* Корректные цвета для default темы */
+.default-theme .hero-wave path {
+	fill: var(--dark-light) !important; /* Цвет services-preview */
+}
+
+.default-theme .advantages-wave path {
+	fill: var(--bg-primary) !important; /* Цвет CTA */
+}
+
+.default-theme .cta-wave path {
+	fill: var(--bg-footer) !important; /* Цвет футера */
+}
+
+/* Корректные цвета для новогодней темы */
+.new-year-theme .hero-wave path {
+	fill: var(--bg-secondary) !important;
+}
+
+.new-year-theme .services-wave path {
+	fill: var(--bg-primary) !important;
+}
+
+.new-year-theme .advantages-wave path {
+	fill: var(--bg-secondary) !important;
+}
+
+.new-year-theme .cta-wave path {
+	fill: var(--bg-footer) !important;
+}
